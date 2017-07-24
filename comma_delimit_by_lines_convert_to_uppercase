@@ -1,0 +1,11 @@
+##Clipboard fusion script, thanks to Greg Mavor
+##Helps copy multi-lined text with crap formatting and cleans up clipboard output
+using System;
+
+public static class ClipboardFusionHelper
+{
+    public static string ProcessText(string text)
+    {
+        return text.Replace("\n", ", ").Replace("\r", "").Trim(new char[] { ',', ' ' }).ToUpper();
+    }
+}
